@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kartu Ucapan Ulang Tahun - UTS DW</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="page-header">
+        <h1>Kartu Ucapan Ulang Tahun</h1>
+        <p>Proyek UTS Desain Web: Live Preview Interface oleh Ridwan Odi Nugroho</p>
+    </header>
+
+    <main class="generator-container">
+        
+        <form id="control-panel" class="panel">
+            <h2>Panel Kontrol Kartu</h2>
+
+            <div class="form-group">
+                <label for="card-title-text">Judul Utama Kartu</label>
+                <input type="text" id="card-title-text" placeholder="Contoh: Happy Birthday, Bro!" value="Selamat Ulang Tahun!" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="recipient-name">Nama Penerima</label>
+                <input type="text" id="recipient-name" placeholder="Contoh: Ayah / Sahabat Terbaik" required>
+            </div>
+
+            <div class="form-group">
+                <label for="birthday-message">Pesan Utama</label>
+                <textarea id="birthday-message" rows="4" placeholder="Contoh: Semoga panjang umur dan bahagia selalu!" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="card-color">Warna Latar Belakang Kartu</label>
+                <input type="color" id="card-color" value="#f3a683">
+            </div>
+
+            <div class="form-group">
+                <label for="text-color">Warna Teks Kartu</label>
+                <input type="color" id="text-color" value="#FFFFFF">
+            </div>
+
+            <div class="form-group">
+                <label for="sender-name">Nama Pengirim (Dari)</label>
+                <input type="text" id="sender-name" placeholder="Contoh: Ridwan Odi Nugroho">
+            </div>
+        </form>
+
+        <section id="preview-area" class="panel birthday-card">
+            
+            <div class="card-content">
+                <h2 id="preview-card-title" class="card-title">Selamat Ulang Tahun!</h2>
+                
+                <p id="preview-recipient" class="recipient-name">Untuk: [Nama Penerima Default]</p>
+                
+                <p id="preview-message" class="main-message">Pesan utama ulang tahun akan muncul di sini.</p>
+
+                <p id="preview-sender" class="sender-signature">Dari: [Pengirim]</p>
+            </div>
+            
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>© 2025 UTS Desain Web | Ridwan Odi Nugroho - 4524210089</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

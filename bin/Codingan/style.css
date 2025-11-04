@@ -1,0 +1,139 @@
+/* Wajib: Praktik Terbaik CSS */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Variabel Warna */
+    --color-primary: #e67e22; /* Oranye/Cokelat */
+    --color-text-dark: #34495e; /* Navy/Gelap */
+    --color-background-light: #f4f4f4; /* Abu muda */
+    --color-white: #ffffff;
+    --color-secondary: #7f8c8d;
+    --border-radius: 10px;
+    
+    /* Base font-size untuk unit rem */
+    font-size: 16px; 
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    background-color: var(--color-background-light);
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Wajib menggunakan fungsi clamp() untuk font-size judul */
+h1 {
+    font-size: clamp(1.8rem, 5vw, 3rem); 
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 0.2rem; 
+}
+
+/* Merapikan Header dan Footer (Terpusat) */
+.page-header, .page-footer {
+    padding: 1rem 1rem; 
+    background-color: var(--color-white);
+    text-align: center; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.page-header p {
+    margin: 0;
+    color: var(--color-secondary);
+    font-size: 0.9rem;
+}
+
+.page-footer p {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--color-secondary);
+}
+
+/* **Layout Mobile-First (Default 1 Kolom)** */
+.generator-container {
+    padding: 1.5rem; 
+    max-width: 1000px;
+    margin: 1.5rem auto; /* Memusatkan container */
+    flex-grow: 1; 
+    width: 95%;
+}
+
+.panel {
+    background-color: var(--color-white);
+    padding: 1.5rem; 
+    margin-bottom: 1.5rem; 
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Input */
+input[type="text"], 
+textarea,
+.form-group input[type="color"] { 
+    width: 100%; 
+    max-width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-family: inherit;
+    /* Reset padding untuk color picker agar tidak terlalu besar */
+    padding: 0; 
+    height: 40px; 
+}
+
+/* Styling Kartu Ucapan (Area Pratinjau) */
+.birthday-card {
+    min-height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 5px solid var(--color-primary);
+    transition: background-color 0.3s ease;
+    padding: 2rem; 
+}
+
+/* KUNCI: Menghilangkan warna teks default agar JS bisa mengendalikannya sepenuhnya */
+.card-title, 
+.recipient-name, 
+.main-message, 
+.sender-signature {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Shadow tetap ada untuk keterbacaan */
+    /* Warna akan disuntikkan via JS! */
+}
+
+.card-title {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.main-message {
+    font-size: 1.3rem; 
+    margin: 1.5rem 0;
+}
+
+
+/* **Desain Responsif: Media Query untuk Desktop (2 Kolom)** */
+@media (min-width: 768px) {
+    /* Menggunakan Flexbox untuk 2 kolom */
+    .generator-container {
+        display: flex; 
+        gap: 2rem; 
+        align-items: flex-start; 
+    }
+
+    .panel {
+        flex: 1; 
+        max-width: 50%;
+        margin-bottom: 0;
+    }
+}
