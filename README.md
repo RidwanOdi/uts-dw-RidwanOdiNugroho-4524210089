@@ -12,7 +12,7 @@ Proyek UTS Desain Web: Live Preview Interface oleh Ridwan Odi Nugroho
 Berikut adalah fitur yang telah berhasil diimplementasikan:
 
 - [x] Repositori GitHub sudah dibuat
-- [] Melakukan minimal 3 commit
+- [x] Melakukan minimal 3 commit
 - [x] Menerapkan HTML Semantik (header, main, footer)
 - [x] Formulir sudah aksesibel (label + for/id)
 - [x] Layout Mobile-First (1 kolom)
